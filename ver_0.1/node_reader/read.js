@@ -10,7 +10,7 @@ port.on('readable', function () {
   console.log('Data:', port.read())
 })
 */
-
+const request = require('request')
 const SerialPort = require('serialport')
 const Readline = require('@serialport/parser-readline')
 const port = new SerialPort('/dev/ttyACM0')
@@ -34,6 +34,30 @@ parser.on('data', function (data) {
   var ts = Math.round((new Date()).getTime() / 1000);
   console.log(ts, temp,humid,press,rssi);
   //console.log('data received: ' + data)
+
+
+  //send data to local server
+  request.post(
+    'http://localhost:8000/api/endpoint',
+    {
+      json: {
+        temperature: temp,
+        humidity:humid,
+        pressure:press
+      }
+    },
+    (error, res, body) => {
+      if (error) {
+        console.error(error)
+        return
+      }
+      console.log(`statusCode: ${res.statusCode}`)
+      console.log(body)
+    }
+  )
+
+
+
 })
 
 
