@@ -103,15 +103,31 @@ while True:
             parts = p.strip('{').strip('}').split(",")
             print(parts)
             
-            if len(parts)>100:
+            if len(parts)==5:
                 print("Got here!")
 
+                json_data={}
+                for i in range(0,len(parts)):
+                    q=parts[i].split(':')
+                    print(q)
+                    #field=str(q[0].strip('\"'))
+                    field=q[0].strip('\"')
+                    value=float(q[1])
+                    print(field,value)
+                    json_data.update({field:value})
+                    #json_data=json_data+field+":"+value
+                    #if (i!=len(parts)-1):
+                    #    json_data=json_data+","
+                
+                #json_data=json_data+"}"
+                print(json_data)
                 #temp = parts[1]
                 #print("temp=",temp)
 
                 #json_data = {"cpu_temperature":temp}
                 #json_data = p
-                json_data = {"cpu_temperature":32.2}
+                
+                #json_data = {"cpu_temperature":32.2}
                 print("json_data:",json_data)
 
                 print("Posting to ",JSON_POST_URL)
