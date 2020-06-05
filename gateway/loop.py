@@ -97,18 +97,21 @@ while True:
             time.sleep(.1)
             led.value=False
 
-            p = str(packet, 'ascii').strip()
+            p = str(packet, 'ascii').rstrip('\x00').strip()
 
             print("Received: ",p)
-            parts = p.split(":")
+            parts = p.strip('{').strip('}').split(",")
             print(parts)
+            
+            if len(parts)>100:
+                print("Got here!")
 
-            if len(parts)==2:
-                temp = parts[1]
-                print("temp=",temp)
+                #temp = parts[1]
+                #print("temp=",temp)
 
-                json_data = {"cpu_temperature":temp}
-
+                #json_data = {"cpu_temperature":temp}
+                #json_data = p
+                json_data = {"cpu_temperature":32.2}
                 print("json_data:",json_data)
 
                 print("Posting to ",JSON_POST_URL)
