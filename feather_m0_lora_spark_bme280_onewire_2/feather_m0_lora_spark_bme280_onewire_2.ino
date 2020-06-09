@@ -249,7 +249,7 @@ doc["ha"] = round2(humidity);
 doc["pa"] = round2(pressure);
 doc["tp1"] = round2(tempC1F);
 doc["tp2"] = round2(tempC2F);
-
+doc["BatV"] = round2(measuredvbat);
 
   Serial.println(temp);
   Serial.println(humidity);
@@ -258,9 +258,9 @@ doc["tp2"] = round2(tempC2F);
   delay(1000); // Wait 1 second between transmits, could also 'sleep' here!
   Serial.println("Transmitting..."); // Send a message to rf95_server
   
-  char radiopacket[120] = "Hello World #      ";
+  char radiopacket[140] = "Hello World #      ";
 
-  serializeJson(doc,radiopacket,120);
+  serializeJson(doc,radiopacket,140);
   
   //itoa(packetnum++, radiopacket+13, 10);
   Serial.print("Sending "); Serial.println(radiopacket);
@@ -268,7 +268,7 @@ doc["tp2"] = round2(tempC2F);
   
   Serial.println("Sending...");
   delay(10);
-  rf95.send((uint8_t *)radiopacket, 120);
+  rf95.send((uint8_t *)radiopacket, 140);
 
   Serial.println("Waiting for packet to complete..."); 
   delay(10);

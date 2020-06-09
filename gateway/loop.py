@@ -38,7 +38,9 @@ farmos_privkey=network_secrets['farmos_privkey']
 # url for remote logging site
 base_url= "https://edgecollective.farmos.net/farm/sensor/listener/"
 
-JSON_POST_URL = base_url+farmos_pubkey+"?private_key="+farmos_privkey
+FARMOS_POST_URL = base_url+farmos_pubkey+"?private_key="+farmos_privkey
+
+EDGE_POST_URL = "http://64.227.0.108:8600/api/user"
 
 import adafruit_esp32spi.adafruit_esp32spi_socket as socket
 from adafruit_esp32spi import adafruit_esp32spi
@@ -87,69 +89,72 @@ while True:
 
     gc.collect()
 
-    try:
+    #try:
 
-        print("radio waiting ...")
-        packet = rfm9x.receive(timeout=TIMEOUT)
-        if packet is not None:
+    print("radio waiting ...")
+    packet = rfm9x.receive(timeout=TIMEOUT)
+    if packet is not None:
 
-            led.value=True
-            time.sleep(.1)
-            led.value=False
+        led.value=True
+        time.sleep(.1)
+        led.value=False
 
-            p = str(packet, 'ascii').rstrip('\x00').strip()
+        p = str(packet, 'ascii').rstrip('\x00').strip().rstrip('\x00')
 
-            print("Received: ",p)
-            parts = p.strip('{').strip('}').split(",")
-            print(parts)
+        print("Received: ",p)
+        parts = p.strip('{').strip('}').split(",")
+        print(parts)
+        
+        if len(parts)==8:
+            print("Got here!")
+
+            json_data={}
+            for i in range(0,len(parts)):
+                q=parts[i].split(':')
+                print(q)
+                #field=str(q[0].strip('\"'))
+                field=q[0].strip('\"')
+                #value=float(q[1].strip('\"'))
+                value=q[1].strip('\"')
+                #value=q[1]
+                print(field,value)
+                json_data.update({field:value})
+                #json_data=json_data+field+":"+value
+                #if (i!=len(parts)-1):
+                #    json_data=json_data+","
             
-            if len(parts)==5:
-                print("Got here!")
+            json_data.update({'rssi':rfm9x.rssi})
+            #json_data=json_data+"}"
+            print(json_data)
+            #temp = parts[1]
+            #print("temp=",temp)
 
-                json_data={}
-                for i in range(0,len(parts)):
-                    q=parts[i].split(':')
-                    print(q)
-                    #field=str(q[0].strip('\"'))
-                    field=q[0].strip('\"')
-                    value=float(q[1])
-                    print(field,value)
-                    json_data.update({field:value})
-                    #json_data=json_data+field+":"+value
-                    #if (i!=len(parts)-1):
-                    #    json_data=json_data+","
-                
-                #json_data=json_data+"}"
-                print(json_data)
-                #temp = parts[1]
-                #print("temp=",temp)
+            #json_data = {"cpu_temperature":temp}
+            #json_data = p
+            
+            #json_data = {"cpu_temperature":32.2}
+            print("json_data:",json_data)
 
-                #json_data = {"cpu_temperature":temp}
-                #json_data = p
-                
-                #json_data = {"cpu_temperature":32.2}
-                print("json_data:",json_data)
+            print("Posting to ",EDGE_POST_URL)
+            
+            connect(WIFI_ESSID,WIFI_PASS)
+            response = requests.post(FARMOS_POST_URL, json=json_data)
+            response.close()
 
-                print("Posting to ",JSON_POST_URL)
-                
-                connect(WIFI_ESSID,WIFI_PASS)
-                response = requests.post(JSON_POST_URL, json=json_data)
-                response.close()
+            print("Done. Sleeping for ", SLEEP_TIME, "seconds")
 
-                print("Done. Sleeping for ", SLEEP_TIME, "seconds")
+            for i in range(0,3):
+                led.value=True
+                time.sleep(.1)
+                led.value=False
 
-                for i in range(0,3):
-                    led.value=True
-                    time.sleep(.1)
-                    led.value=False
-
-                time.sleep(90) #in case no timer
+            time.sleep(300) #in case no timer
     
-    except Exception as e:
-        if (attemptCount>MAX_ATTEMPTS):
-            print("Error -- will try again in ", SLEEP_TIME, "seconds")
-            time.sleep(90) #in case no timer
-        print("error: "+str(e))
+    #except Exception as e:
+    #    if (attemptCount>MAX_ATTEMPTS):
+    #        print("Error -- will try again in ", SLEEP_TIME, "seconds")
+    #        time.sleep(90) #in case no timer
+    #    print("error: "+str(e))
 
 
        
