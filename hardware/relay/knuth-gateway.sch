@@ -118,10 +118,10 @@ DI01
 Wire Wire Line
 	6200 3900 6800 3900
 $Comp
-L knuth-gateway-rescue:R-Device R1
+L knuth-gateway-rescue:R-Device R13
 U 1 1 5E667905
 P 2750 4600
-F 0 "R1" H 2820 4646 50  0000 L CNN
+F 0 "R13" H 2820 4646 50  0000 L CNN
 F 1 "1K" H 2820 4555 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2680 4600 50  0001 C CNN
 F 3 "~" H 2750 4600 50  0001 C CNN
@@ -129,10 +129,10 @@ F 3 "~" H 2750 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D1
+L Device:LED D13
 U 1 1 5E66790B
 P 2750 4900
-F 0 "D1" V 2789 4783 50  0000 R CNN
+F 0 "D13" V 2789 4783 50  0000 R CNN
 F 1 "LED" V 2698 4783 50  0000 R CNN
 F 2 "LED_THT:LED_D3.0mm" H 2750 4900 50  0001 C CNN
 F 3 "~" H 2750 4900 50  0001 C CNN
@@ -265,10 +265,10 @@ Wire Wire Line
 Wire Wire Line
 	2750 3500 2750 4450
 $Comp
-L Device:R RO1
+L Device:R R1
 U 1 1 5EE6DA1A
 P 4950 2600
-F 0 "RO1" H 5020 2646 50  0000 L CNN
+F 0 "R1" H 5020 2646 50  0000 L CNN
 F 1 "R" H 5020 2555 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4880 2600 50  0001 C CNN
 F 3 "~" H 4950 2600 50  0001 C CNN
@@ -349,10 +349,10 @@ Wire Wire Line
 Text GLabel 3400 6350 0    50   Input ~ 0
 D10
 $Comp
-L knuth-gateway-rescue:+3V3-power #PWR?
+L knuth-gateway-rescue:+3V3-power #PWR0103
 U 1 1 5EED4B78
 P 2750 2000
-F 0 "#PWR?" H 2750 1850 50  0001 C CNN
+F 0 "#PWR0103" H 2750 1850 50  0001 C CNN
 F 1 "+3V3" H 2765 2173 50  0000 C CNN
 F 2 "" H 2750 2000 50  0001 C CNN
 F 3 "" H 2750 2000 50  0001 C CNN
@@ -360,14 +360,60 @@ F 3 "" H 2750 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L knuth-gateway-rescue:+3V3-power #PWR?
+L knuth-gateway-rescue:+3V3-power #PWR0104
 U 1 1 5EED84B2
 P 3150 6050
-F 0 "#PWR?" H 3150 5900 50  0001 C CNN
+F 0 "#PWR0104" H 3150 5900 50  0001 C CNN
 F 1 "+3V3" H 3165 6223 50  0000 C CNN
 F 2 "" H 3150 6050 50  0001 C CNN
 F 3 "" H 3150 6050 50  0001 C CNN
 	1    3150 6050
 	1    0    0    -1  
 $EndComp
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 5EE2C0E6
+P 8050 1750
+F 0 "SW1" H 8050 2035 50  0000 C CNN
+F 1 "SW_SPDT" H 8050 1944 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8050 1750 50  0001 C CNN
+F 3 "~" H 8050 1750 50  0001 C CNN
+	1    8050 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R RA1
+U 1 1 5EE34F4A
+P 8250 1500
+F 0 "RA1" H 8320 1546 50  0000 L CNN
+F 1 "R" H 8320 1455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 8180 1500 50  0001 C CNN
+F 3 "~" H 8250 1500 50  0001 C CNN
+	1    8250 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L knuth-gateway-rescue:+3V3-power #PWR0105
+U 1 1 5EE35FA8
+P 8250 1350
+F 0 "#PWR0105" H 8250 1200 50  0001 C CNN
+F 1 "+3V3" H 8265 1523 50  0000 C CNN
+F 2 "" H 8250 1350 50  0001 C CNN
+F 3 "" H 8250 1350 50  0001 C CNN
+	1    8250 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L knuth-gateway-rescue:GND-power #PWR0106
+U 1 1 5EE3680D
+P 8250 1850
+F 0 "#PWR0106" H 8250 1600 50  0001 C CNN
+F 1 "GND" H 8255 1677 50  0000 C CNN
+F 2 "" H 8250 1850 50  0001 C CNN
+F 3 "" H 8250 1850 50  0001 C CNN
+	1    8250 1850
+	1    0    0    -1  
+$EndComp
+Text GLabel 7850 1750 0    50   Input ~ 0
+A1
 $EndSCHEMATC
