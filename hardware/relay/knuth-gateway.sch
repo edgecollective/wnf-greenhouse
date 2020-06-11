@@ -120,23 +120,23 @@ Wire Wire Line
 $Comp
 L knuth-gateway-rescue:R-Device R13
 U 1 1 5E667905
-P 2750 4600
-F 0 "R13" H 2820 4646 50  0000 L CNN
-F 1 "1K" H 2820 4555 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2680 4600 50  0001 C CNN
-F 3 "~" H 2750 4600 50  0001 C CNN
-	1    2750 4600
+P 5500 4600
+F 0 "R13" H 5570 4646 50  0000 L CNN
+F 1 "1K" H 5570 4555 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5430 4600 50  0001 C CNN
+F 3 "~" H 5500 4600 50  0001 C CNN
+	1    5500 4600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:LED D13
 U 1 1 5E66790B
-P 2750 4900
-F 0 "D13" V 2789 4783 50  0000 R CNN
-F 1 "LED" V 2698 4783 50  0000 R CNN
-F 2 "LED_THT:LED_D3.0mm" H 2750 4900 50  0001 C CNN
-F 3 "~" H 2750 4900 50  0001 C CNN
-	1    2750 4900
+P 5500 4900
+F 0 "D13" V 5539 4783 50  0000 R CNN
+F 1 "LED" V 5448 4783 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 5500 4900 50  0001 C CNN
+F 3 "~" H 5500 4900 50  0001 C CNN
+	1    5500 4900
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -196,23 +196,23 @@ $EndComp
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 5E641806
-P 2950 950
-F 0 "H1" H 3050 996 50  0000 L CNN
-F 1 "MountingHole" H 3050 905 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 2950 950 50  0001 C CNN
-F 3 "~" H 2950 950 50  0001 C CNN
-	1    2950 950 
+P 4350 1200
+F 0 "H1" H 4450 1246 50  0000 L CNN
+F 1 "MountingHole" H 4450 1155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 4350 1200 50  0001 C CNN
+F 3 "~" H 4350 1200 50  0001 C CNN
+	1    4350 1200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 5E641C08
-P 2950 1300
-F 0 "H2" H 3050 1346 50  0000 L CNN
-F 1 "MountingHole" H 3050 1255 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 2950 1300 50  0001 C CNN
-F 3 "~" H 2950 1300 50  0001 C CNN
-	1    2950 1300
+P 4350 1550
+F 0 "H2" H 4450 1596 50  0000 L CNN
+F 1 "MountingHole" H 4450 1505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 4350 1550 50  0001 C CNN
+F 3 "~" H 4350 1550 50  0001 C CNN
+	1    4350 1550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -261,9 +261,9 @@ SDA
 Text GLabel 3000 2300 0    50   Input ~ 0
 D10
 Wire Wire Line
-	6200 3500 2750 3500
+	6200 3500 5500 3500
 Wire Wire Line
-	2750 3500 2750 4450
+	5500 3500 5500 4450
 $Comp
 L Device:R R1
 U 1 1 5EE6DA1A
@@ -295,12 +295,12 @@ Wire Wire Line
 $Comp
 L knuth-gateway-rescue:GND-power #PWR0101
 U 1 1 5EE83F3B
-P 2750 5050
-F 0 "#PWR0101" H 2750 4800 50  0001 C CNN
-F 1 "GND" H 2755 4877 50  0000 C CNN
-F 2 "" H 2750 5050 50  0001 C CNN
-F 3 "" H 2750 5050 50  0001 C CNN
-	1    2750 5050
+P 5500 5050
+F 0 "#PWR0101" H 5500 4800 50  0001 C CNN
+F 1 "GND" H 5505 4877 50  0000 C CNN
+F 2 "" H 5500 5050 50  0001 C CNN
+F 3 "" H 5500 5050 50  0001 C CNN
+	1    5500 5050
 	1    0    0    -1  
 $EndComp
 Text GLabel 5950 1600 0    50   Input ~ 0
@@ -317,36 +317,36 @@ F 3 "" H 6800 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3150 6050 3150 6550
+	2750 3050 2750 3550
 $Comp
 L knuth-gateway-rescue:Screw_Terminal_01x03-Connector J2
 U 1 1 5EED09F8
-P 4250 6450
-F 0 "J2" H 4170 6125 50  0000 C CNN
-F 1 "Screw_Terminal_01x03" H 4170 6216 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-3.5-H_1x03_P3.50mm_Horizontal" H 4250 6450 50  0001 C CNN
-F 3 "~" H 4250 6450 50  0001 C CNN
-	1    4250 6450
+P 3850 3450
+F 0 "J2" H 3770 3125 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 3770 3216 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-3.5-H_1x03_P3.50mm_Horizontal" H 3850 3450 50  0001 C CNN
+F 3 "~" H 3850 3450 50  0001 C CNN
+	1    3850 3450
 	-1   0    0    1   
 $EndComp
 $Comp
 L knuth-gateway-rescue:GND-power #PWR0102
 U 1 1 5EED09FE
-P 2850 6450
-F 0 "#PWR0102" H 2850 6200 50  0001 C CNN
-F 1 "GND" H 2855 6277 50  0000 C CNN
-F 2 "" H 2850 6450 50  0001 C CNN
-F 3 "" H 2850 6450 50  0001 C CNN
-	1    2850 6450
+P 2450 3450
+F 0 "#PWR0102" H 2450 3200 50  0001 C CNN
+F 1 "GND" H 2455 3277 50  0000 C CNN
+F 2 "" H 2450 3450 50  0001 C CNN
+F 3 "" H 2450 3450 50  0001 C CNN
+	1    2450 3450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3400 6350 4450 6350
+	3000 3350 4050 3350
 Wire Wire Line
-	2850 6450 4450 6450
+	2450 3450 4050 3450
 Wire Wire Line
-	3150 6550 4450 6550
-Text GLabel 3400 6350 0    50   Input ~ 0
+	2750 3550 4050 3550
+Text GLabel 3000 3350 0    50   Input ~ 0
 D10
 $Comp
 L knuth-gateway-rescue:+3V3-power #PWR0103
@@ -362,12 +362,12 @@ $EndComp
 $Comp
 L knuth-gateway-rescue:+3V3-power #PWR0104
 U 1 1 5EED84B2
-P 3150 6050
-F 0 "#PWR0104" H 3150 5900 50  0001 C CNN
-F 1 "+3V3" H 3165 6223 50  0000 C CNN
-F 2 "" H 3150 6050 50  0001 C CNN
-F 3 "" H 3150 6050 50  0001 C CNN
-	1    3150 6050
+P 2750 3050
+F 0 "#PWR0104" H 2750 2900 50  0001 C CNN
+F 1 "+3V3" H 2765 3223 50  0000 C CNN
+F 2 "" H 2750 3050 50  0001 C CNN
+F 3 "" H 2750 3050 50  0001 C CNN
+	1    2750 3050
 	1    0    0    -1  
 $EndComp
 $Comp
