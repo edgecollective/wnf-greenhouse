@@ -25,7 +25,7 @@
 #define DONE 10
 #define LED 13
 
-const unsigned TX_INTERVAL = 600;
+const unsigned TX_INTERVAL = 100;
 
 // for feather m0  
 #define RFM95_CS 8
@@ -44,7 +44,7 @@ const unsigned TX_INTERVAL = 600;
 
 // Data wire is plugged into port 2 on the Arduino
 #define ONE_WIRE_BUS 11
-#define TEMPERATURE_PRECISION 9
+#define TEMPERATURE_PRECISION 12
 
 // Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
 OneWire oneWire(ONE_WIRE_BUS);
@@ -325,6 +325,7 @@ digitalWrite(LED, HIGH);   // turn the LED on (HIGH is the voltage level)
 
   if(RTC_SLEEP) {
 
+/*
 pinMode(0,INPUT_PULLUP);
     pinMode(1,INPUT_PULLUP);
     pinMode(A0,INPUT_PULLUP);
@@ -340,6 +341,7 @@ pinMode(0,INPUT_PULLUP);
     pinMode(10,INPUT_PULLUP);
     pinMode(11,INPUT_PULLUP);
     pinMode(12,INPUT_PULLUP);
+    */
     //pinMode(13,INPUT_PULLUP);
     
             // Sleep for a period of TX_INTERVAL using single shot alarm
