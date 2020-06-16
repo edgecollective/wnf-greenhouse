@@ -93,7 +93,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "milling/"))
+      (outputdirectory "gerb/"))
   )
 
   (net 0 "")
@@ -427,13 +427,13 @@
     (pad 1 np_thru_hole circle (at 0 0) (size 2.7 2.7) (drill 2.7) (layers *.Cu *.Mask))
   )
 
-  (gr_line (start 126.6571 37.5539) (end 126.6571 83.235945) (layer Edge.Cuts) (width 0.05) (tstamp 5EE973C6))
-  (gr_line (start 58.2549 37.5412) (end 58.2549 83.2612) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 121.6914 88.2142) (end 63.3095 88.2142) (layer Edge.Cuts) (width 0.05) (tstamp 5EE973E1))
-  (gr_line (start 63.1952 32.5374) (end 121.666 32.5374) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 126.6571 37.5539) (end 126.665223 83.2104) (layer Edge.Cuts) (width 0.05) (tstamp 5EE973C6))
+  (gr_line (start 58.2676 37.5285) (end 58.271533 83.204433) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 121.6914 88.2142) (end 63.3476 88.2269) (layer Edge.Cuts) (width 0.05) (tstamp 5EE973E1))
+  (gr_line (start 63.253834 32.542266) (end 121.666 32.5374) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 63.3208 83.177633) (end 58.271533 83.204433) (angle -90) (layer Edge.Cuts) (width 0.05))
-  (gr_arc (start 121.661333 83.2104) (end 121.661333 88.206167) (angle -90) (layer Edge.Cuts) (width 0.05) (tstamp 5EE973DE))
-  (gr_arc (start 121.653155 37.541345) (end 126.6571 37.541345) (angle -90) (layer Edge.Cuts) (width 0.05))
+  (gr_arc (start 121.661333 83.2104) (end 121.6914 88.2142) (angle -89.65572336) (layer Edge.Cuts) (width 0.05) (tstamp 5EE973DE))
+  (gr_arc (start 121.653155 37.541345) (end 126.6571 37.5539) (angle -89.99667949) (layer Edge.Cuts) (width 0.05))
   (gr_arc (start 63.253834 37.5285) (end 63.253834 32.542266) (angle -90) (layer Edge.Cuts) (width 0.05))
 
   (segment (start 99.0753 53.2739) (end 98.9838 53.3654) (width 1.7) (layer Bottom) (net 0) (tstamp 5DA2F4D3) (status 30))
