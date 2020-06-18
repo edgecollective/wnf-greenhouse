@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 9)
+    (drawings 10)
     (tracks 195)
     (zones 0)
     (modules 16)
@@ -750,6 +750,18 @@
     (pad 1 np_thru_hole circle (at 0 0) (size 2.7 2.7) (drill 2.7) (layers *.Cu *.Mask))
   )
 
+  (dimension 62.23 (width 0.1) (layer Dwgs.User)
+    (gr_text "62.230 mm" (at 152.38 57.15 270) (layer Dwgs.User)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (feature1 (pts (xy 125.73 88.265) (xy 151.716421 88.265)))
+    (feature2 (pts (xy 125.73 26.035) (xy 151.716421 26.035)))
+    (crossbar (pts (xy 151.13 26.035) (xy 151.13 88.265)))
+    (arrow1a (pts (xy 151.13 88.265) (xy 150.543579 87.138496)))
+    (arrow1b (pts (xy 151.13 88.265) (xy 151.716421 87.138496)))
+    (arrow2a (pts (xy 151.13 26.035) (xy 150.543579 27.161504)))
+    (arrow2b (pts (xy 151.13 26.035) (xy 151.716421 27.161504)))
+  )
   (dimension 74.295 (width 0.1) (layer Dwgs.User)
     (gr_text "74.295 mm" (at 96.2025 106.025) (layer Dwgs.User)
       (effects (font (size 1 1) (thickness 0.15)))

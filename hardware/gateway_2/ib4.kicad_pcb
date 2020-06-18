@@ -65,7 +65,7 @@
     (pad_drill 0.762)
     (pad_to_mask_clearance 0.051)
     (solder_mask_min_width 0.25)
-    (aux_axis_origin 58.42 88.265)
+    (aux_axis_origin 59.055 88.265)
     (visible_elements FFFFFF7F)
     (pcbplotparams
       (layerselection 0x01000_fffffff8)
