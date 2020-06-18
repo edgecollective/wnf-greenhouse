@@ -1,0 +1,557 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 12296 8468
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	8500 3800 9100 3800
+Text Label 9100 3800 2    70   ~ 0
+MOSI
+Wire Wire Line
+	9100 3700 8500 3700
+Text Label 9100 3700 2    70   ~ 0
+MISO
+Wire Wire Line
+	8500 3900 9100 3900
+Text Label 9100 3900 2    70   ~ 0
+SCK
+Wire Wire Line
+	9100 4000 8500 4000
+Text Label 9100 4000 2    70   ~ 0
+A5
+Wire Wire Line
+	8500 4100 9100 4100
+Text Label 9100 4100 2    70   ~ 0
+A4
+Wire Wire Line
+	9100 4200 8500 4200
+Text Label 9100 4200 2    70   ~ 0
+A3
+Wire Wire Line
+	8500 4300 9100 4300
+Text Label 9100 4300 2    70   ~ 0
+A2
+Text Label 9100 4400 2    70   ~ 0
+A1
+Wire Wire Line
+	4450 4500 6150 4500
+Text Label 6150 4500 2    70   ~ 0
+D11
+Wire Wire Line
+	6150 4600 4450 4600
+Text Label 6150 4600 2    70   ~ 0
+D12
+Wire Wire Line
+	8500 4700 8000 4700
+Text Label 8300 4700 2    70   ~ 0
+AREF
+Wire Wire Line
+	9100 4900 9100 4800
+Wire Wire Line
+	9100 4800 8500 4800
+Text Label 9100 4900 2    10   ~ 0
++3V3
+Wire Wire Line
+	4450 4800 5550 4800
+Text Label 4450 4800 2    10   ~ 0
+VBUS
+Wire Wire Line
+	5550 5000 4450 5000
+Text Label 5550 5000 2    10   ~ 0
+VBAT
+Wire Wire Line
+	4450 4700 6150 4700
+Text Label 6150 4700 2    70   ~ 0
+D13
+Text Label 9100 4500 2    70   ~ 0
+A0
+Wire Wire Line
+	4450 4000 6150 4000
+Text Label 6150 4000 2    70   ~ 0
+SCL
+Wire Wire Line
+	6150 3900 4450 3900
+Text Label 6150 3900 2    70   ~ 0
+SDA
+Wire Wire Line
+	4450 4300 6150 4300
+Text Label 6150 4300 2    70   ~ 0
+D9
+Wire Wire Line
+	6150 4200 4450 4200
+Text Label 6150 4200 2    70   ~ 0
+D7
+Wire Wire Line
+	4450 3800 6150 3800
+Text Label 6150 3800 2    70   ~ 0
+TX_D1
+Wire Wire Line
+	6150 3700 4450 3700
+Text Label 6150 3700 2    70   ~ 0
+RX_D0
+Wire Wire Line
+	6150 4400 4450 4400
+Text Label 6150 4400 2    70   ~ 0
+D10
+Wire Wire Line
+	8500 4900 9000 4900
+Text Label 9000 4900 2    70   ~ 0
+~RESET
+Wire Wire Line
+	8500 3600 9100 3600
+Text Label 9100 3600 2    70   ~ 0
+D2
+Wire Wire Line
+	8500 4600 8100 4600
+Text Label 8300 4600 2    70   ~ 0
+VHI
+Wire Wire Line
+	4450 4100 6250 4100
+Text Label 6150 4100 2    70   ~ 0
+D5_5V
+$Comp
+L ib4-eagle-import:VBUS #U$019
+U 1 1 E246D3EE
+P 5650 4800
+F 0 "#U$019" H 5650 4800 50  0001 C CNN
+F 1 "VBUS" H 5590 4840 42  0000 L BNN
+F 2 "" H 5650 4800 50  0001 C CNN
+F 3 "" H 5650 4800 50  0001 C CNN
+	1    5650 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L ib4-eagle-import:VBAT #U$020
+U 1 1 F3FE4F2D
+P 5650 5000
+F 0 "#U$020" H 5650 5000 50  0001 C CNN
+F 1 "VBAT" H 5590 5040 42  0000 L BNN
+F 2 "" H 5650 5000 50  0001 C CNN
+F 3 "" H 5650 5000 50  0001 C CNN
+	1    5650 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L ib4-eagle-import:+3V3 #+3V01
+U 1 1 406B5002
+P 9100 5000
+F 0 "#+3V01" H 9100 5000 50  0001 C CNN
+F 1 "+3V3" V 9000 4800 59  0000 L BNN
+F 2 "" H 9100 5000 50  0001 C CNN
+F 3 "" H 9100 5000 50  0001 C CNN
+	1    9100 5000
+	-1   0    0    1   
+$EndComp
+$Comp
+L ib4-eagle-import:HEADER-1X14 JP2
+U 1 1 FA93C76E
+P 4350 4300
+F 0 "JP2" H 4100 5125 59  0000 L BNN
+F 1 "HEADER-1X14" H 4100 3500 59  0000 L BNN
+F 2 "ib4:1X14_ROUND70" H 4350 4300 50  0001 C CNN
+F 3 "" H 4350 4300 50  0001 C CNN
+	1    4350 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L ib4-eagle-import:HEADER-1X14 JP4
+U 1 1 47274FB3
+P 8600 4300
+F 0 "JP4" H 8350 5125 59  0000 L BNN
+F 1 "HEADER-1X14" H 8350 3500 59  0000 L BNN
+F 2 "ib4:1X14_ROUND70" H 8600 4300 50  0001 C CNN
+F 3 "" H 8600 4300 50  0001 C CNN
+	1    8600 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L ib4-eagle-import:GND #GND02
+U 1 1 13A376EC
+P 4550 4900
+F 0 "#GND02" H 4550 4900 50  0001 C CNN
+F 1 "GND" H 4450 4800 59  0000 L BNN
+F 2 "" H 4550 4900 50  0001 C CNN
+F 3 "" H 4550 4900 50  0001 C CNN
+	1    4550 4900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x12_Female J1
+U 1 1 5D953D46
+P 2900 4400
+F 0 "J1" H 2928 4376 50  0000 L CNN
+F 1 "Conn_01x12_Female" H 2928 4285 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical" H 2900 4400 50  0001 C CNN
+F 3 "~" H 2900 4400 50  0001 C CNN
+	1    2900 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L ib4-eagle-import:GND #GND0101
+U 1 1 5D960432
+P 3450 4600
+F 0 "#GND0101" H 3450 4600 50  0001 C CNN
+F 1 "GND" H 3350 4500 59  0000 L BNN
+F 2 "" H 3450 4600 50  0001 C CNN
+F 3 "" H 3450 4600 50  0001 C CNN
+	1    3450 4600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3100 4700 3450 4700
+Text GLabel 9100 3900 2    50   Input ~ 0
+SCK
+Text GLabel 3100 4600 2    50   Input ~ 0
+SCK
+Text GLabel 3100 4500 2    50   Input ~ 0
+MISO
+Text GLabel 3100 4400 2    50   Input ~ 0
+MOSI
+Text GLabel 3100 4100 2    50   Input ~ 0
+E_~RST
+Text GLabel 3100 4200 2    50   Input ~ 0
+E_BUSY
+Text GLabel 3100 4300 2    50   Input ~ 0
+E_CS
+Text GLabel 9100 3700 2    50   Input ~ 0
+MISO
+Text GLabel 9100 3800 2    50   Input ~ 0
+MOSI
+Text GLabel 6150 4500 2    50   Input ~ 0
+E_BUSY
+Text GLabel 6150 4400 2    50   Input ~ 0
+E_~RST
+Text GLabel 6150 4600 2    50   Input ~ 0
+E_CS
+Text GLabel 6150 4200 2    50   Input ~ 0
+L_RST
+Text GLabel 6150 4300 2    50   Input ~ 0
+L_CS
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5D99EBDD
+P 9500 2050
+F 0 "H1" H 9600 2096 50  0000 L CNN
+F 1 "MountingHole" H 9600 2005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 9500 2050 50  0001 C CNN
+F 3 "~" H 9500 2050 50  0001 C CNN
+	1    9500 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5D99FC38
+P 9500 2250
+F 0 "H2" H 9600 2296 50  0000 L CNN
+F 1 "MountingHole" H 9600 2205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 9500 2250 50  0001 C CNN
+F 3 "~" H 9500 2250 50  0001 C CNN
+	1    9500 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5D99FE70
+P 9500 2450
+F 0 "H3" H 9600 2496 50  0000 L CNN
+F 1 "MountingHole" H 9600 2405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 9500 2450 50  0001 C CNN
+F 3 "~" H 9500 2450 50  0001 C CNN
+	1    9500 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5D99FFF4
+P 9500 2650
+F 0 "H4" H 9600 2696 50  0000 L CNN
+F 1 "MountingHole" H 9600 2605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5" H 9500 2650 50  0001 C CNN
+F 3 "~" H 9500 2650 50  0001 C CNN
+	1    9500 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x09_Female J2
+U 1 1 5EEA3416
+P 10400 3750
+F 0 "J2" H 10428 3776 50  0000 L CNN
+F 1 "Conn_01x09_Female" H 10428 3685 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical" H 10400 3750 50  0001 C CNN
+F 3 "~" H 10400 3750 50  0001 C CNN
+	1    10400 3750
+	1    0    0    -1  
+$EndComp
+Text GLabel 10200 3950 0    50   Input ~ 0
+MOSI
+Text GLabel 10200 3850 0    50   Input ~ 0
+MISO
+Text GLabel 10200 3750 0    50   Input ~ 0
+SCK
+$Comp
+L ib4-eagle-import:+3V3 #+3V0102
+U 1 1 5EEA5AF3
+P 10200 3150
+F 0 "#+3V0102" H 10200 3150 50  0001 C CNN
+F 1 "+3V3" V 10100 2950 59  0000 L BNN
+F 2 "" H 10200 3150 50  0001 C CNN
+F 3 "" H 10200 3150 50  0001 C CNN
+	1    10200 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 3250 10200 3350
+$Comp
+L ib4-eagle-import:GND #GND0102
+U 1 1 5EEA77CB
+P 9650 3550
+F 0 "#GND0102" H 9650 3550 50  0001 C CNN
+F 1 "GND" H 9550 3450 59  0000 L BNN
+F 2 "" H 9650 3550 50  0001 C CNN
+F 3 "" H 9650 3550 50  0001 C CNN
+	1    9650 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 3450 9650 3450
+$Comp
+L ib4-eagle-import:VBUS #U$0101
+U 1 1 5EE9709C
+P 3200 4900
+F 0 "#U$0101" H 3200 4900 50  0001 C CNN
+F 1 "VBUS" H 3140 4940 42  0000 L BNN
+F 2 "" H 3200 4900 50  0001 C CNN
+F 3 "" H 3200 4900 50  0001 C CNN
+	1    3200 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10200 4150 9550 4150
+Wire Wire Line
+	9550 4150 9550 4500
+Wire Wire Line
+	8500 4500 9550 4500
+Wire Wire Line
+	9400 4400 9400 4050
+Wire Wire Line
+	9400 4050 10200 4050
+Wire Wire Line
+	8500 4400 9400 4400
+$Comp
+L Device:Q_NPN_EBC Q2
+U 1 1 5EEBB84D
+P 4000 1900
+F 0 "Q2" H 4191 1946 50  0000 L CNN
+F 1 "Q_NPN_EBC" H 4191 1855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Wide" H 4200 2000 50  0001 C CNN
+F 3 "~" H 4000 1900 50  0001 C CNN
+	1    4000 1900
+	1    0    0    -1  
+$EndComp
+Text GLabel 9000 5450 2    50   Input ~ 0
+~RST
+Wire Wire Line
+	9000 4900 9000 5450
+Text GLabel 4850 1650 2    50   Input ~ 0
+~RST
+$Comp
+L Device:R R4
+U 1 1 5EEC8981
+P 4100 1350
+F 0 "R4" H 4170 1396 50  0000 L CNN
+F 1 "R" H 4170 1305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 4030 1350 50  0001 C CNN
+F 3 "~" H 4100 1350 50  0001 C CNN
+	1    4100 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L ib4-eagle-import:+3V3 #+3V0101
+U 1 1 5EECB46C
+P 4100 1100
+F 0 "#+3V0101" H 4100 1100 50  0001 C CNN
+F 1 "+3V3" V 4000 900 59  0000 L BNN
+F 2 "" H 4100 1100 50  0001 C CNN
+F 3 "" H 4100 1100 50  0001 C CNN
+	1    4100 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L ib4-eagle-import:GND #GND0103
+U 1 1 5EECCBBD
+P 4100 2200
+F 0 "#GND0103" H 4100 2200 50  0001 C CNN
+F 1 "GND" H 4000 2100 59  0000 L BNN
+F 2 "" H 4100 2200 50  0001 C CNN
+F 3 "" H 4100 2200 50  0001 C CNN
+	1    4100 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5EECE4CA
+P 3650 1900
+F 0 "R3" V 3443 1900 50  0000 C CNN
+F 1 "R" V 3534 1900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 3580 1900 50  0001 C CNN
+F 3 "~" H 3650 1900 50  0001 C CNN
+	1    3650 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L ib4-eagle-import:+3V3 #+3V0103
+U 1 1 5EED59D6
+P 2700 1100
+F 0 "#+3V0103" H 2700 1100 50  0001 C CNN
+F 1 "+3V3" V 2600 900 59  0000 L BNN
+F 2 "" H 2700 1100 50  0001 C CNN
+F 3 "" H 2700 1100 50  0001 C CNN
+	1    2700 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1700 2700 1650
+$Comp
+L Device:R R2
+U 1 1 5EED491C
+P 2700 1350
+F 0 "R2" H 2770 1396 50  0000 L CNN
+F 1 "R" H 2770 1305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 2630 1350 50  0001 C CNN
+F 3 "~" H 2700 1350 50  0001 C CNN
+	1    2700 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NPN_EBC Q1
+U 1 1 5EED1D6F
+P 2600 1900
+F 0 "Q1" H 2791 1946 50  0000 L CNN
+F 1 "Q_NPN_EBC" H 2791 1855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Wide" H 2800 2000 50  0001 C CNN
+F 3 "~" H 2600 1900 50  0001 C CNN
+	1    2600 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5EEDBB3B
+P 2250 1900
+F 0 "R1" V 2043 1900 50  0000 C CNN
+F 1 "R" V 2134 1900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 2180 1900 50  0001 C CNN
+F 3 "~" H 2250 1900 50  0001 C CNN
+	1    2250 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L ib4-eagle-import:GND #GND0104
+U 1 1 5EEDE3AF
+P 2700 2200
+F 0 "#GND0104" H 2700 2200 50  0001 C CNN
+F 1 "GND" H 2600 2100 59  0000 L BNN
+F 2 "" H 2700 2200 50  0001 C CNN
+F 3 "" H 2700 2200 50  0001 C CNN
+	1    2700 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 1900 1900 0    50   Input ~ 0
+DRV
+Wire Wire Line
+	2100 1900 1900 1900
+Wire Wire Line
+	3500 1900 3350 1900
+Wire Wire Line
+	3350 1900 3350 1650
+Wire Wire Line
+	3350 1650 2700 1650
+Connection ~ 2700 1650
+Wire Wire Line
+	2700 1650 2700 1500
+Wire Wire Line
+	4100 1500 4100 1650
+Wire Wire Line
+	4100 1650 4850 1650
+Connection ~ 4100 1650
+Wire Wire Line
+	4100 1650 4100 1700
+$Comp
+L Connector:Conn_01x05_Female J3
+U 1 1 5EEF8EF8
+P 6750 1250
+F 0 "J3" V 6688 962 50  0000 R CNN
+F 1 "Conn_01x05_Female" V 6597 962 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 6750 1250 50  0001 C CNN
+F 3 "~" H 6750 1250 50  0001 C CNN
+	1    6750 1250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ib4-eagle-import:+3V3 #+3V0104
+U 1 1 5EEF9D1B
+P 6250 1300
+F 0 "#+3V0104" H 6250 1300 50  0001 C CNN
+F 1 "+3V3" V 6150 1100 59  0000 L BNN
+F 2 "" H 6250 1300 50  0001 C CNN
+F 3 "" H 6250 1300 50  0001 C CNN
+	1    6250 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 1450 6250 1450
+Wire Wire Line
+	6250 1450 6250 1400
+$Comp
+L ib4-eagle-import:GND #GND0105
+U 1 1 5EEFB9FE
+P 6650 1550
+F 0 "#GND0105" H 6650 1550 50  0001 C CNN
+F 1 "GND" H 6550 1450 59  0000 L BNN
+F 2 "" H 6650 1550 50  0001 C CNN
+F 3 "" H 6650 1550 50  0001 C CNN
+	1    6650 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J4
+U 1 1 5EEFC542
+P 6750 2250
+F 0 "J4" V 6596 2298 50  0000 L CNN
+F 1 "Conn_01x02_Female" V 6687 2298 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 6750 2250 50  0001 C CNN
+F 3 "~" H 6750 2250 50  0001 C CNN
+	1    6750 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6750 1450 6750 2050
+$Comp
+L ib4-eagle-import:GND #GND0106
+U 1 1 5EEFF875
+P 6350 2150
+F 0 "#GND0106" H 6350 2150 50  0001 C CNN
+F 1 "GND" H 6250 2050 59  0000 L BNN
+F 2 "" H 6350 2150 50  0001 C CNN
+F 3 "" H 6350 2150 50  0001 C CNN
+	1    6350 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2050 6350 2050
+Text GLabel 6950 1800 2    50   Input ~ 0
+DRV
+Wire Wire Line
+	6850 1450 6850 1800
+Wire Wire Line
+	6850 1800 6950 1800
+$EndSCHEMATC
